@@ -13,6 +13,9 @@ buildscript {
 group 'grpc'
 version '1.0-SNAPSHOT'
 
+def grpcVersion = '1.9.0' // CURRENT_GRPC_VERSION
+
+apply plugin: 'com.google.protobuf'
 apply plugin: 'java'
 apply plugin: 'kotlin'
 
@@ -67,3 +70,5 @@ sourceSets {
         }
     }
 }
+
+compileKotlin.mustRunAfter 'generateProto'

@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "orange.example.grpc";
+option java_outer_classname = "RegistryProto";
+option objc_class_prefix = "HLW";
+
+package helloworld;
+
+// The greeting service definition.
+service Registry {
+    // Sends a greeting
+    rpc RegisterService (Register) returns (RegisterResult) {}
+    rpc ConsultService (ListServices) returns (ListOfServices) {}
+}
+
+// The request message containing the name of the service
+message Register {
+    string name = 1;
+}
+
+message ListServices {
+    string message = 1;
+}
+
+message RegisterResult {
+    string status = 1;
+}
+
+message ListOfServices {
+    string services = 1;
+}

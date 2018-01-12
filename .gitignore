@@ -5,3 +5,5 @@ target
 .gradle
 .project
 *.iml
+*/build
+*/out
