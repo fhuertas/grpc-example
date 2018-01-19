@@ -14,6 +14,7 @@ group 'grpc'
 version '1.0-SNAPSHOT'
 
 def grpcVersion = '1.9.0' // CURRENT_GRPC_VERSION
+def typesafeConfigVersion = '1.3.1'
 
 apply plugin: 'com.google.protobuf'
 apply plugin: 'java'
@@ -32,6 +33,7 @@ dependencies {
     compile "io.grpc:grpc-netty:${grpcVersion}"
     compile "io.grpc:grpc-protobuf:${grpcVersion}"
     compile "io.grpc:grpc-stub:${grpcVersion}"
+    compile "com.typesafe:config:${typesafeConfigVersion}"
 
     testCompile "io.grpc:grpc-testing:${grpcVersion}"
     testCompile "junit:junit:4.12"
